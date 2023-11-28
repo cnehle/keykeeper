@@ -1,5 +1,6 @@
 .first-frame,
-.frame-container
+.frame-container,
+.frame-div
 {
     display: flex;
     flex-direction: column;
@@ -23,6 +24,10 @@
     background-repeat: no-repeat;
     background-position: top;
     mix-blend-mode: normal;
+}
+.frame-div 
+{
+    gap: 90.5px;
 }
 .menu-wrapper 
 {
@@ -48,4 +53,25 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+}
+.group 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 46.3px;
+}
+.key,
+.rope 
+{
+    position: relative;
+    width: 261.9px;
+    height: 35.7px;
+    object-fit: cover;
+}
+.rope 
+{
+    width: 292.1px;
+    height: 70px;
 }
