@@ -33,5 +33,30 @@
             </div>
         </main>
     </div>
+
+    <script>
+        var menu = document.getElementById("menu");
+        if (menu) 
+        {
+          menu.addEventListener("click", function (e) 
+          {
+            window.location.href = "menu.html";
+          });
+        }
+
+        
+        var frameMain = document.getElementById("frameMain");
+        if (frameMain) 
+        {
+          frameMain.addEventListener("click", function () 
+          {
+            var anchor = document.querySelector("[data-scroll-to='frameMain']");
+            if (anchor) 
+            {
+              anchor.scrollIntoView({ block: "nearest", behavior: "smooth" });
+            }
+          });
+        } 
+    </script>
 </body>
 </html>
