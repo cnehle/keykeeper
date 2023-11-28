@@ -75,3 +75,36 @@
     width: 292.1px;
     height: 70px;
 }
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26.14px;
+}
+.button1,
+.button2,
+.button3 
+{
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    width: 198.1px;
+    height: 52.3px;
+    background-image: url(/src/img/станции.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.button2,
+.button3 
+{
+    background-image: url(/src/img/карта.png);
+}
+.button3 
+{
+    background-image: url(/src/img/результаты.png);
+}
