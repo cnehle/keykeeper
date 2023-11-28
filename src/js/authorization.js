@@ -21,3 +21,15 @@ function checkAccessCodeCurator() {
     else
     document.getElementById("message").innerText = "Неверный код доступа";
 }
+
+//функция для проверки пароля наставник
+function checkAccessCodeMentor() {
+    var accessCode = document.getElementById("accessCodeInput").value;
+    if (accessCode === "mentor")
+    {
+    document.getElementById("message").innerText = "Доступ разрешён! Добро пожаловать, наставник.";
+    // тут будет переход на страничку наставника
+    }
+    else
+    document.getElementById("message").innerText = "Неверный код доступа";
+}
