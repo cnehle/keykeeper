@@ -1,0 +1,26 @@
+.first-frame,
+.frame-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.frame-container 
+{
+    height: 726px;
+    gap: 173px;
+    cursor: pointer;
+}
+.first-frame 
+{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    background-image: url(/src/img/FirstFrame1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    mix-blend-mode: normal;
+}
