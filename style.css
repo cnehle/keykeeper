@@ -19,7 +19,7 @@
     width: 100%;
     height: 800px;
     overflow: hidden;
-    background-image: url(/src/img/FirstFrame1.jpg);
+    background-image: url(img/FirstFrame1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -49,7 +49,7 @@
   height: 34px;
   transform: rotate(180deg);
   transform-origin: 0 0;
-  background-image: url(/src/img/Menu.png);
+  background-image: url(img/Menu.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -94,7 +94,7 @@
     position: relative;
     width: 198.1px;
     height: 52.3px;
-    background-image: url(/src/img/станции.png);
+    background-image: url(img/станции.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -102,9 +102,9 @@
 .button2,
 .button3 
 {
-    background-image: url(/src/img/карта.png);
+    background-image: url(img/карта.png);
 }
 .button3 
 {
-    background-image: url(/src/img/результаты.png);
+    background-image: url(img/результаты.png);
 }
