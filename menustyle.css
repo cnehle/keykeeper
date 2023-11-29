@@ -8,7 +8,7 @@
     height: 51.3px;
     transform: rotate(180deg);
     transform-origin: 0 0;
-    background-image: url(/src/img_menu/Крестик.png);
+    background-image: url(img_menu/Крестик.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -38,17 +38,17 @@
     position: relative;
     width: 254px;
     height: 54px;
-    background-image: url(/src/img_menu/админ.png);
+    background-image: url(img_menu/админ.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
   }
   .button2,
   .button3 {
-    background-image: url(/src/img_menu/наставник.png);
+    background-image: url(img_menu/наставник.png);
   }
   .button3 {
-    background-image: url(/src/img_menu/куратор.png);
+    background-image: url(img_menu/куратор.png);
   }
   .container {
     display: flex;
@@ -82,7 +82,7 @@
     width: 100%;
     height: 800px;
     overflow: hidden;
-    background-image: url(/src/img_menu/MenuFrame.png);
+    background-image: url(img_menu/MenuFrame.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
