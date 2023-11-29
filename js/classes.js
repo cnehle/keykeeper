@@ -26,3 +26,12 @@ class station {
         return this.status;
     }
 }
+
+//класс для команды
+class team {
+    constructor(name, rating)
+    {
+        this.name = name;      //название команды
+        this.rating = rating;  //место в общем рейтинге
+    }
+}
