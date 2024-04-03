@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/keykeeper/static/css/main.b6a0a8be.css",
+    "main.js": "/keykeeper/static/js/main.a528500c.js",
+    "static/media/Adminscreen.jpg": "/keykeeper/static/media/Adminscreen.b7f87b7977cc50dc9928.jpg",
+    "static/media/background.jpg": "/keykeeper/static/media/background.9f85a546a2664cbf88c1.jpg",
+    "static/media/code.jpg": "/keykeeper/static/media/code.50d31abcbb78809fc4c7.jpg",
+    "static/media/Role.png": "/keykeeper/static/media/Role.1902eb2a2f0d486eea4e.png",
+    "static/media/StationList.png": "/keykeeper/static/media/StationList.dc720a3e7b5787fbd1c7.png",
+    "static/media/imgframe.jpg": "/keykeeper/static/media/imgframe.d78d550b775c9c2dd66c.jpg",
+    "static/media/edit.png": "/keykeeper/static/media/edit.336f427a9940983bf5a3.png",
+    "static/media/teamList.png": "/keykeeper/static/media/teamList.08b1d06e7018b7968517.png",
+    "static/media/stationList.png": "/keykeeper/static/media/stationList.1e199289c620aeb548f2.png",
+    "static/media/free.png": "/keykeeper/static/media/free.aaeb1e54d7c26f18dbd6.png",
+    "static/media/MenuFrame.png": "/keykeeper/static/media/MenuFrame.a3b2ac63cff44265d56d.png",
+    "static/media/Веревка первокурсников.png": "/keykeeper/static/media/Веревка первокурсников.b022e9a890d3ab296bb8.png",
+    "static/media/occupied.png": "/keykeeper/static/media/occupied.dcd4fb298ee12d209467.png",
+    "static/media/save.png": "/keykeeper/static/media/save.282a4e3822b6829e3d86.png",
+    "static/media/Results.png": "/keykeeper/static/media/Results.48d24eab408638bf72ec.png",
+    "static/media/hello.png": "/keykeeper/static/media/hello.e20786b3108d27ab3b13.png",
+    "static/media/Curator.png": "/keykeeper/static/media/Curator.4c3db817641d3665db0d.png",
+    "static/media/create.png": "/keykeeper/static/media/create.f1f17b574bde8fc4962f.png",
+    "static/media/Admin.png": "/keykeeper/static/media/Admin.014a6f77f29ddb80116e.png",
+    "static/media/exit.png": "/keykeeper/static/media/exit.673c90087df6486af6de.png",
+    "static/media/Station.png": "/keykeeper/static/media/Station.a40323440eef0310765b.png",
+    "static/media/stationscreen.png": "/keykeeper/static/media/stationscreen.48d24eab408638bf72ec.png",
+    "static/media/Keeper.png": "/keykeeper/static/media/Keeper.522beaf978ae43330385.png",
+    "static/media/Map.png": "/keykeeper/static/media/Map.1af3c74cf7d7cce06c15.png",
+    "static/media/Name.png": "/keykeeper/static/media/Name.d76ca8a6c021ff7ccb83.png",
+    "static/media/close.png": "/keykeeper/static/media/close.71d9b5f7eecfedc66368.png",
+    "static/media/КЛЮЧНИК.png": "/keykeeper/static/media/КЛЮЧНИК.3ad0d604bb88ca14a0ec.png",
+    "static/media/Close.png": "/keykeeper/static/media/Close.c11364adbb33bca749d3.png",
+    "static/media/balls.png": "/keykeeper/static/media/balls.04609bf6cdb4ce4eec76.png",
+    "static/media/Menu.png": "/keykeeper/static/media/Menu.fb6f55e52b7368654186.png",
+    "index.html": "/keykeeper/index.html",
+    "main.b6a0a8be.css.map": "/keykeeper/static/css/main.b6a0a8be.css.map",
+    "main.a528500c.js.map": "/keykeeper/static/js/main.a528500c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6a0a8be.css",
+    "static/js/main.a528500c.js"
+  ]
+}
