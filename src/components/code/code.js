@@ -11,7 +11,7 @@ function Code() {
   const onNextClick = useCallback(() => {
     const accessCode = document.getElementsByClassName("input")[0].value;
     const btnId = location.state;
-    if (acceessCode === "admin" && btnId === "0") {
+    if (accessCode === "admin" && btnId === "0") {
       navigate('/admin');
     } else {
       alert("Некорректный пароль");
