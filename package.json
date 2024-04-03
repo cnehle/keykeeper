@@ -1,7 +1,7 @@
 {
   "name": "pd-app",
   "version": "0.1.0",
-  "homepage": "https://cnehle.github.io/keykeeper/",
+  "homepage": "https://cnehle.github.io/keykeeper",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
