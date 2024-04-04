@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import FirstFrame from '../firstframe/firstframe';
 import Menu from '../menu/menu';
 import Code from '../code/code';
@@ -14,8 +14,6 @@ function App()
 {
     return(
         <div className="app">
-            <BrowserRouter>
-
                 <Routes>
                     <Route path="/" element={<FirstFrame />} />;
                     <Route path="/menu" element={<Menu />} />;
@@ -25,8 +23,6 @@ function App()
                     <Route path="/stlistfst" element={<StListFST/>}/>;
                     <Route path="/screen" element={<Screen/>}/>;
                 </Routes>
-
-            </BrowserRouter>
         </div>
     );
 }
