@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/keykeeper/static/css/main.b6a0a8be.css",
-    "main.js": "/keykeeper/static/js/main.a528500c.js",
+    "main.js": "/keykeeper/static/js/main.19acf186.js",
     "static/media/Adminscreen.jpg": "/keykeeper/static/media/Adminscreen.b7f87b7977cc50dc9928.jpg",
     "static/media/background.jpg": "/keykeeper/static/media/background.9f85a546a2664cbf88c1.jpg",
     "static/media/code.jpg": "/keykeeper/static/media/code.50d31abcbb78809fc4c7.jpg",
@@ -34,10 +34,10 @@
     "static/media/Menu.png": "/keykeeper/static/media/Menu.fb6f55e52b7368654186.png",
     "index.html": "/keykeeper/index.html",
     "main.b6a0a8be.css.map": "/keykeeper/static/css/main.b6a0a8be.css.map",
-    "main.a528500c.js.map": "/keykeeper/static/js/main.a528500c.js.map"
+    "main.19acf186.js.map": "/keykeeper/static/js/main.19acf186.js.map"
   },
   "entrypoints": [
     "static/css/main.b6a0a8be.css",
-    "static/js/main.a528500c.js"
+    "static/js/main.19acf186.js"
   ]
 }
