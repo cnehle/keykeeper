@@ -1,19 +1,11 @@
 
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import '../firstframe/firstframe.css'
-import imgSrc1 from './img/КЛЮЧНИК.png';
-import imgSrc2 from './img/Веревка первокурсников.png';
+import '../firstframe/firstframe.css';
 
 function FirstFrame() {
     const navigate = useNavigate();
 
-    const onFrameMainScroll = useCallback(() => {
-      const anchor = document.querySelector("[data-scroll-to='frameMain']");
-      if (anchor) {
-        anchor.scrollIntoView({ block: "nearest", behavior: "smooth" });
-      }
-    }, []);
   
     //Переход на вкладку Menu
     const onMenuClick = useCallback(() => {
@@ -37,29 +29,27 @@ function FirstFrame() {
 
    
     return (
-      <header className="first-frame">
-        <main
-          className="frame-parent"
-          data-scroll-to="frameMain"
-          onClick={onFrameMainScroll}
-        >
-          <div className="menu-wrapper">
-            <button className="menu" onClick={onMenuClick} />
+      <div className="first-frame">
+        <main className="frame-parent">
+
+          
+          <button className="menu" onClick={onMenuClick} />
+         
+
+          <div className="first-frame_body">
+            <div className="header">
+              <h1 class="first_text keeper">КЛЮЧНИК</h1>
+              <h2 class="first_text rope">Веревка первокурсника</h2>
+            </div>
+            <div className="buttons_first" >
+              <button className="btn_ff btn_wide_ff" onClick={onStationClick}>Станции</button>
+              <button className="btn_ff btn_wide_ff" onClick={onMapClick}>Карта</button>
+              <button className="btn_ff btn_wide_ff" onClick={onResultsClick}>Результаты</button>
+            </div>
           </div>
 
-          <div className="frame-group">
-            <div className="parent">
-              <img className="icon1" src={imgSrc1} alt="" />
-              <img className="icon2" src={imgSrc2} alt="" />
-            </div>
-            <div className="group" >
-              <button className="button1" onClick={onStationClick} />
-              <button className="button2" onClick={onMapClick} />
-              <button className="button3" onClick={onResultsClick} />
-            </div>
-          </div>
         </main>
-      </header>
+      </div>
     );
   };
   
