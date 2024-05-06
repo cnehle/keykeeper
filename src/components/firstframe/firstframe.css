@@ -1,4 +1,4 @@
-.menu {
+.menu_btn {
   border: 0;
   padding: 0;
   background-color: transparent;
@@ -11,22 +11,19 @@
   
 }
    
-.first-frame {
+.first_frame {
   background-image: url(./img/imgframe.jpg);
   background-size:cover;
   min-height: 100vh;
   min-width: 100vw;
+  overflow: hidden;
 }  
 
-.frame-parent {
-  max-width: 360px;
+.frame_main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 30px;
-  min-height: 90vh;
-  padding: 50px 25px;
-  margin: auto;
+  padding: 50px 25px; 
+  position: relative;
 }
   
 
@@ -34,8 +31,9 @@
 .buttons_first {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn_ff {
@@ -43,30 +41,42 @@
   outline: 0;
   border-radius: 15px;
   color: #41540B;
-  font-weight: bold;
-  margin: 0;
+  font-weight: 900;
   font-size: 18px;
   padding: 10px 30px;
   background: rgba(255, 255, 255, 0.559);
   box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
 }
 
-.btn_wide_ff {
-  display: block;
-  width: 100%;
+
+@media screen and (max-width: 768px) {
+  .btn_ff {
+    width: 70%; /* Ширина кнопок будет 100% при ширине экрана менее 768px */
+  }
 }
 
-.first_text{
-  text-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
-  
-  color: #ffffff;
+.btn_wide_ff {
+  display: block;
 }
 
 .keeper{
-  font-size: 270%;
+  display: flex;
+  justify-content: left;
+  margin-top: 40%;
+  text-shadow: -2px 5px 2px #3546065f;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 250%;
 }
 
+
 .rope{
+  display: flex;
+  justify-content: left;
+  margin-top: 0%;
+  margin-bottom: 20%;
+  text-shadow: -2px 5px 2px #3546065f;
+  color: #ffffff;
+  font-weight: 900;
   font-size: 200%;
-  
 }
