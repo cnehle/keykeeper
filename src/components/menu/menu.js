@@ -1,7 +1,6 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./menu.css";
-import imgSrc1 from './img/Role.png';
 
 function Menu() {
   const navigate = useNavigate();
@@ -26,19 +25,17 @@ function Menu() {
   }, [navigate]);
 
   return (
-    <div className="menu1">
-      <main className="frame-container">
-        <div className="wrapper">
-          <button className="button" onClick={onButtonClick} />
+    <div className="menu">
+      <main className="menu_main">
+        <button className="button_close" onClick={onButtonClick} />
+        <h1 className="text_choose">Выбери роль</h1>
+
+        <div className="buttons_menu">
+          <button className="btn_menu administrator" onClick={onButton1Click}>Администратор</button>
+          <button className="btn_menu mentor" onClick={onButton2Click}>Наставник</button>
+          <button className="btn_menu tutor" onClick={onButton3Click}>Куратор станции</button>
         </div>
-        <div className="frame-div">
-          <img className="frame-child" src={imgSrc1} alt="" />
-          <div className="container">
-            <button className="button4" onClick={onButton1Click} />
-            <button className="button5" onClick={onButton2Click} />
-            <button className="button6" onClick={onButton3Click} />
-          </div>
-        </div>
+        
       </main>
     </div>
   );
