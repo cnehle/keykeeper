@@ -2,18 +2,15 @@
   background: url(./img/MenuFrame.png);
   min-height: 100vh;
   min-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .menu_main{
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px;
   position: relative;
+  padding: 50px 25px; 
+  
 }
 
 .button_close{
@@ -23,7 +20,7 @@
   background-size: cover;
   width: 34px;
   height: 34px;
-  top: 10px !important;
+  top: 20px !important;
   right: 10px !important;
   justify-self: end;
   position: absolute;
@@ -32,8 +29,9 @@
 .text_choose{
   
   display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: center;
+  margin-top: 30%;
   text-shadow: -2px 5px 2px #3546065f;
   color: #526b0e;
   font-weight: 900;
@@ -46,7 +44,10 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-top: 20%;
 }
+
+
 
 .btn_menu{
   border: 0;
@@ -59,4 +60,5 @@
   padding: 10px 30px;
   background: rgba(255, 255, 255, 0.559);
   box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
+  width: 70%;
 }

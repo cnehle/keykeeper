@@ -46,14 +46,10 @@
   padding: 10px 30px;
   background: rgba(255, 255, 255, 0.559);
   box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
+  width: 70%;
 }
 
 
-@media screen and (max-width: 768px) {
-  .btn_ff {
-    width: 70%; /* Ширина кнопок будет 100% при ширине экрана менее 768px */
-  }
-}
 
 .btn_wide_ff {
   display: block;
