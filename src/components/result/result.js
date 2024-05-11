@@ -13,7 +13,7 @@ const Results = () => {
     <div className="results">
       <main className="result_main">
         
-        <button className="close" id="close" onClick={onCloseClick}></button>
+        <button className="result_close" id="close" onClick={onCloseClick}></button>
         <h3 className="result_text" id="result_text"> Результаты </h3>
         
         <div className="Inform">
@@ -35,7 +35,7 @@ const Results = () => {
                   className="list_inp text_comand"
                   id="text_comand"
                   type="text"
-                  value={"Кошатника"}
+                  value={"Кошатники"}
                 ></input>
               </li>
               

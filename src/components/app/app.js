@@ -5,7 +5,7 @@ import Menu from '../menu/menu';
 import Code from '../code/code';
 import Result from '../result/result';
 import Admin from '../admin/admin';
-import StListFST from '../station list fst/stlistfst';
+import StListFST from '../stationlist/stationlist';
 import Screen from '../stationscreen/screen'
 import './app.css';
 
