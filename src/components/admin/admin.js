@@ -19,7 +19,7 @@ const AdminScreen = () => {
 
   return (
     <div className="admin-screen">
-      <main className="frame-parent2">
+      <main className="admin_main">
 
         <div class="frame-parent2__header">
           <h1 class="admin_text hello">Привет, администратор!</h1>

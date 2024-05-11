@@ -9,8 +9,7 @@
 
 
 
-.frame-parent2 {
-  max-width: 360px;
+.admin_main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
