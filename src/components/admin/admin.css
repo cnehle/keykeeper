@@ -1,122 +1,68 @@
-.icon2,
-.wrapper1 {
-  width: 291px;
-  height: 69px;
-}
-.icon2 {
-  position: relative;
-  object-fit: cover;
-}
-.wrapper1 {
-  margin: 0 !important;
-  position: absolute;
-  top: 0.5px;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-}
-.edit-1-icon {
-  width: 291px;
-  position: relative;
-  height: 28px;
-  object-fit: cover;
-}
-.edit-1-wrapper {
-  margin: 0 !important;
-  position: absolute;
-  top: 167.5px;
-  left: -1px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-.stationlist-1 {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  width: 290px;
-  position: relative;
-  height: 75px;
-  background-image: url(./img/stationList.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.stationlist-1-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.teamlist-1 {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  width: 290px;
-  position: relative;
-  height: 75px;
-  background-image: url(./img/teamList.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.frame-parent3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 33px;
-  z-index: 2;
-}
-.backbtn-1 {
-  cursor: pointer;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-  width: 115px;
-  position: relative;
-  height: 49px;
-  background-image: url(./img/exit.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-}
-.admin-screen,
-.backbtn-1-wrapper,
-.frame-parent2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.backbtn-1-wrapper {
-  margin: 0 !important;
-  position: absolute;
-  top: 582.5px;
-  left: 175.5px;
-  z-index: 3;
-}
-.admin-screen,
-.frame-parent2 {
-  position: relative;
-}
-.frame-parent2 {
-  height: 631px;
-  gap: 84px;
-}
 .admin-screen {
-  width: 360px;
-  height: 800px;
-  overflow: hidden;
-  background-image: url(./img/Adminscreen.jpg);
-  background-size: cover;
+  background: url(./img/Adminscreen.jpg);
+  background-size:cover;
   background-repeat: no-repeat;
-  background-position: top;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+
+
+
+.admin_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 90vh;
+  padding: 50px 25px;
+  margin: auto;
+}
+
+
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  font-size: 18px;
+  padding: 10px 30px;
+  background: #738F23;
+  box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
+}
+
+.btn_wide {
+  display: block;
+  width: 100%;
+}
+
+.btn_right {
+  margin-left: auto; 
+  display: block;
+}
+
+.btn_small {
+  padding: 10px 20px;
+}
+
+.admin_text {
+  color: #41540B;
+  text-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
+  
+  
+}
+.hello{
+  font-size: 215%;
+}
+.creat{
+  font-size: 125%;
 }

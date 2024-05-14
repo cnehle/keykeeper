@@ -1,7 +1,6 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "../result/result.css";
-import imgSrc1 from './img/balls.png';
 
 const Results = () => {
   const navigate = useNavigate();
@@ -12,24 +11,78 @@ const Results = () => {
 
   return (
     <div className="results">
-      <main className="rectangle-parent">
-        <button className="close" onClick={onCloseClick} />
-        <h3 className="h3">Результаты</h3>
-
-        <div className="parent1">
-          <label className="label">баллы</label>
-          <h2 className="h2">Название команды</h2>
-        </div>
-
-        <ol className="frame-inner">
+      <main className="result_main">
         
-        <div className="text-parent">
-          <input className="text" type="text" />
-          <img className="ellipse-icon" alt="" src={imgSrc1} />
-          <li className="text1">{`   `}</li>
-        </div>
+        <button className="result_close" id="close" onClick={onCloseClick}></button>
+        <h3 className="result_text" id="result_text"> Результаты </h3>
         
-        </ol>
+        <div className="Inform">
+          <div>
+            <h2 className="text_namecomand" id="text_namecomand">Название команды</h2>
+            
+            <ol className="result_list">
+              <li className="result_list_elem">
+                <input
+                  className="list_inp text_comand"
+                  id="text_comand"
+                  type="text"
+                  value={"Незабудки"}
+                ></input>
+              </li>
+              
+              <li className="result_list_elem">
+                <input
+                  className="list_inp text_comand"
+                  id="text_comand"
+                  type="text"
+                  value={"Кошатники"}
+                ></input>
+              </li>
+              
+              <li className="result_list_elem">
+                <input
+                  className="list_inp text_comand"
+                  id="text_comand"
+                  type="text"
+                  value={"Лучики"}
+                ></input>
+              </li>
+            </ol>
+          </div>
+          
+          <div>
+            <h2 className="text_score" id="text_score">Баллы</h2>
+            
+            <ol className="result_list">
+              <li className="result_list_elem">
+                <input
+                  className="list_inp score"
+                  id="score"
+                  type="text"
+                  value={"33"}
+                ></input>
+              </li>
+              
+              <li className="result_list_elem">
+                <input
+                  className="list_inp score"
+                  id="score"
+                  type="text"
+                  value={"54"}
+                ></input>
+              </li>
+              
+              <li className="result_list_elem">
+                <input
+                  className="list_inp score"
+                  id="score"
+                  type="text"
+                  value={"45"}
+                ></input>
+              </li>
+            </ol>
+          </div>
+        </div>
       </main>
     </div>
   );
