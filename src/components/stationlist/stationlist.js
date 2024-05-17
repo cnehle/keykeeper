@@ -28,13 +28,19 @@ const StationListFst = () => {
             <h2 className="text_stationlist">Список станций</h2>
 
             <div className="Inform">
-                <div>
+                
                     <ol className="station_name">
                         <li className="station_name_elem" onClick={onFrameDivClick}>
                             <input 
                                 className="text_station"
                                 type="text"
                                 value={"Паутинка"}>
+                            </input>
+
+                            <input 
+                                className="inp_checkbox"
+                                type="checkbox"
+                                id="inp_checkbox">
                             </input>
                         </li>
 
@@ -44,6 +50,12 @@ const StationListFst = () => {
                                 type="text"
                                 value={"Квиз"}>
                             </input>
+
+                            <input 
+                                className="inp_checkbox"
+                                type="checkbox"
+                                id="inp_checkbox">
+                            </input>
                         </li>
 
                         <li className="station_name_elem" onClick={onFrameDivClick}>
@@ -52,40 +64,17 @@ const StationListFst = () => {
                                 type="text"
                                 value={"Поезд"}>
                             </input>
-                        </li>
-                    </ol>
-                </div>
 
-                <div>
-                    <ol className="station_name">
-                        <li className="station_name_elem">
                             <input 
                                 className="inp_checkbox"
                                 type="checkbox"
-                                id="inp_checkbox"
-                            >
-                            </input>
-                        </li>
-
-                        <li className="station_name_elem">
-                            <input 
-                                className="inp_checkbox"
-                                type="checkbox"
-                                id="inp_checkbox"
-                            >
-                            </input>
-                        </li>
-
-                        <li className="station_name_elem">
-                            <input 
-                                className="inp_checkbox"
-                                type="checkbox"
-                                id="inp_checkbox"
-                            >
+                                id="inp_checkbox">
                             </input>
                         </li>
                     </ol>
-                </div>
+                
+
+                
             </div>
             
             <div className="buttons_stationlist">

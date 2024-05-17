@@ -9,9 +9,7 @@ const AdminScreen = () => {
     navigate("/stlistfst");
   }, [navigate]);
 
-  const onTeamList1Click = useCallback(() => {
-    // Please sync "Список команд " to the project
-  }, []);
+
 
   const onBackBtn1Click = useCallback(() => {
     navigate("/");
@@ -29,7 +27,7 @@ const AdminScreen = () => {
           <p class="admin_text creat" >Выбери, что редактировать:</p>
           <div className="buttons">
             <button className="btn btn_wide" onClick={onStationList1Click}>Список станций</button>
-            <button className="btn btn_wide" onClick={onTeamList1Click}>Список команд</button>
+            
           </div>
         </div>
 
