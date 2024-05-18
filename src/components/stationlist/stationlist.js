@@ -78,8 +78,8 @@ const StationListFst = () => {
             </div>
             
             <div className="buttons_stationlist">
-                <button className="buttons_stationlist creating" onClick={onCreateClick} />
-                <button className="buttons_stationlist exit" onClick={onExitClick} />
+                <button className="btn_stationlist creating" onClick={onCreateClick}>Создать</button>
+                <button className="btn_stationlist exiting" onClick={onExitClick}>Назад</button>
             </div>
         </main>
         </div>
