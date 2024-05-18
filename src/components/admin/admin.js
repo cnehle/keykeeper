@@ -11,28 +11,26 @@ const AdminScreen = () => {
 
 
 
-  const onBackBtn1Click = useCallback(() => {
-    navigate("/");
+  const onExitClick = useCallback(() => {
+    navigate("/menu");
   }, [navigate]);
 
   return (
     <div className="admin-screen">
       <main className="admin_main">
 
-        <div class="frame-parent2__header">
+        <div class="admin__header">
           <h1 class="admin_text hello">Привет, администратор!</h1>
         </div>
 
-        <div class="frame-parent2__body">
+        <div class="admin__body">
           <p class="admin_text creat" >Выбери, что редактировать:</p>
-          <div className="buttons">
-            <button className="btn btn_wide" onClick={onStationList1Click}>Список станций</button>
-            
-          </div>
+          <button className="btn_admin list_st" onClick={onStationList1Click}>Список станций</button>
+      
         </div>
 
-        <div class="frame-parent2__footer">
-          <button className="btn btn_right btn_small" onClick={onBackBtn1Click}>Назад</button>
+        <div class="admin__footer">
+          <button className="btn_admin exit" onClick={onExitClick}>Назад</button>
         </div>
 
       </main>

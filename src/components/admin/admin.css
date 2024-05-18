@@ -7,27 +7,17 @@
 }
 
 
-
-
 .admin_main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
-  min-height: 90vh;
-  padding: 50px 25px;
+  padding: 10% 10%;
   margin: auto;
 }
 
 
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.btn {
+.btn_admin {
   border: 0;
   outline: 0;
   border-radius: 15px;
@@ -40,29 +30,28 @@
   box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
 }
 
-.btn_wide {
+.list_st {
   display: block;
   width: 100%;
+  margin-bottom: 10%;
 }
 
-.btn_right {
+.exit {
   margin-left: auto; 
   display: block;
-}
-
-.btn_small {
   padding: 10px 20px;
 }
 
-.admin_text {
+
+.hello {
   color: #41540B;
   text-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
-  
-  
-}
-.hello{
   font-size: 215%;
+  
 }
+
 .creat{
+  color: #41540B;
+  text-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
   font-size: 125%;
 }
