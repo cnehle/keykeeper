@@ -27,6 +27,7 @@ function Menu() {
   return (
     <div className="menu">
       <main className="menu_main">
+        
         <button className="button_close" onClick={onButtonClick} />
         <h1 className="text_choose">Выбери роль</h1>
 
