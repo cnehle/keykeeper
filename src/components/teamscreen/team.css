@@ -1,0 +1,42 @@
+.team {
+    background-color: #b0c672;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.team_main {
+    display: grid;
+    padding: 20px;
+    position: relative;
+}
+
+.team_close {
+    border: none;
+    background: url(./img/Close.png) no-repeat;
+    background-size: cover;
+    width: 34px;
+    height: 34px;
+    top: 10px !important;
+    right: 10px !important;
+    justify-self: end;
+    position: absolute;
+}
+
+.team_header {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-shadow: -2px 5px 2px #3546065f;
+    color: #526b0e;
+    font-size: 150%;
+    font-weight: 900;
+}
+
+.team_name {
+    color: #41540B;
+    font-size: 100%;
+    font-weight: 700;
+}
