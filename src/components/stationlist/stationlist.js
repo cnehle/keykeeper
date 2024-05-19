@@ -28,7 +28,7 @@ const StationListFst = () => {
             <button className="stationlist_close" onClick={onCloseClick} />
             <h2 className="text_stationlist">Список станций</h2>
 
-            <div className="Inform">
+            <div className="Inform_st">
                 
                     <ol className="station_name">
                         <li className="station_name_elem" >
