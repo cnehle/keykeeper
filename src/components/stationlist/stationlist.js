@@ -8,9 +8,6 @@ const StationListFst = () => {
         navigate("/"); 
     }, [navigate]);
     
-    const onFrameDivClick = useCallback(() => { 
-        // Please sync "Station Name" to the project
-    }, []);
     
     const onScreenClick = useCallback(() => { 
         navigate("/screen")
@@ -64,7 +61,7 @@ const StationListFst = () => {
                             </input>
                         </li>
 
-                        <li className="station_name_elem" onClick={onFrameDivClick}>
+                        <li className="station_name_elem">
                             <input 
                                 onClick={onScreenClick}
                                 className="text_station"
@@ -84,7 +81,7 @@ const StationListFst = () => {
                 
             </div>
             
-            <div className="buttons_stationlist">
+            <div className="but_stlist">
                 <button className="btn_stationlist creating" onClick={onCreateClick}>Создать</button>
                 <button className="btn_stationlist exiting" onClick={onExitClick}>Назад</button>
             </div>
