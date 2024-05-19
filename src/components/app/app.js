@@ -7,6 +7,7 @@ import Result from '../result/result';
 import Admin from '../admin/admin';
 import StListFST from '../stationlist/stationlist';
 import Screen from '../stationscreen/screen'
+import TeamList from '../teamlist/teamlist'
 import './app.css';
 
 
@@ -22,6 +23,7 @@ function App()
                     <Route path="/admin" element={<Admin/>}/>;
                     <Route path="/stlistfst" element={<StListFST/>}/>;
                     <Route path="/screen" element={<Screen/>}/>;
+                    <Route path="/teamslist" element={<TeamList/>}/>;
                 </Routes>
         </div>
     );

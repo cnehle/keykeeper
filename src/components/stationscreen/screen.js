@@ -36,10 +36,6 @@ const StationScreen = () => {
         Всё тело кошки мягкое, гибкое. Хвост длинный и пушистый. Ноги короткие, но сильные. 
         Каждый палец вооружён острым выгнутым когтем. Кошка умеет сделать свою лапу бархатной. Она ловко прячет когти, чтобы не притупились. Ходит на пальцах, но когтями по полу не стучит.
         </textarea>
-        {/* <input 
-          className="description"
-          type="text">
-        </input> */}
 
         <button className="btn_station_screen save" onClick={onSaveClick}>Сохранить</button>
       </main>

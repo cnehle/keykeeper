@@ -1,0 +1,74 @@
+.teamlist{
+    background:transparent url(./img/teanlist.png) no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background-size:cover;
+}
+
+.Inform_team{
+  display: flex;
+  justify-content: space-around;
+}
+
+.stationlist_main{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+.text_teamlist{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  text-shadow: -2px 5px 2px #3546065f;
+  color: #526b0e;
+  font-size: 250%;
+  font-weight: 900;
+}
+
+.team{
+    padding: 0;
+    list-style-type: none;
+    white-space: nowrap; /* не переносить на другие строки */
+
+}
+
+.text_team {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #526b0e;
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.btn_teamlist_exiting {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: 0;
+  outline: 0;
+  border-radius: 15px;
+  color: #738F23;
+  font-weight: 900;
+  font-size: 18px;
+  background: #ffffffb1;
+  box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
+ 
+  padding: 10px 20px;
+}
+  
+
+  
+
