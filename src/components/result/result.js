@@ -1,13 +1,31 @@
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../result/result.css";
 
 const Results = () => {
   const navigate = useNavigate();
+  const [resList, setResList] = useState([]);
 
   const onCloseClick = useCallback(() => {
     navigate("/");
   }, [navigate]);
+
+  useEffect(() => {
+    const Http = new XMLHttpRequest();
+    const url = 'http://5.101.7.212:8181/API/v1/team/pull';
+    Http.open("GET", url);
+    Http.send();
+    Http.onreadystatechange = (e) => {
+        if (Http.readyState === 4 && Http.status === 200) {
+            const data = JSON.parse(Http.responseText);
+            setResList(data.map(item => <li className="result_list_elem" key={item.id}>
+                       <span className="list_inp text_comand">{item.name}</span>
+      <span className="list_inp score">{item.total_score}</span>
+      <span className="list_inp time">{item.time_sum}</span>
+      </li>));
+        }
+    }
+}, []);
 
   return (
     <div className="results">
@@ -24,75 +42,8 @@ const Results = () => {
           <h2 className="text_time" >Время</h2>
           
           <ol className="result_list">
-              <li className="result_list_elem">
-                <input
-                  className="list_inp text_comand"
-                  id="text_comand"
-                  type="text"
-                  value={"Незабудки"}> 
-                </input>
-
-                <input
-                  className="list_inp score"
-                  id="score"
-                  type="text"
-                  value={"33"}>
-                </input>
-
-                <input
-                  className="list_inp time"
-                  type="text"
-                  value={"1:20"}>
-                </input>
-              </li>
-              
-
-              <li className="result_list_elem">
-                <input
-                  className="list_inp text_comand"
-                  id="text_comand"
-                  type="text"
-                  value={"Незабудки"}> 
-                </input>
-
-                <input
-                  className="list_inp score"
-                  id="score"
-                  type="text"
-                  value={"33"}>
-                </input>
-
-                <input
-                  className="list_inp time"
-                  type="text"
-                  value={"1:20"}>
-                </input>
-              </li>
-
-
-              <li className="result_list_elem">
-                <input
-                  className="list_inp text_comand"
-                  id="text_comand"
-                  type="text"
-                  value={"Незабудки"}> 
-                </input>
-
-                <input
-                  className="list_inp score"
-                  id="score"
-                  type="text"
-                  value={"33"}>
-                </input>
-
-                <input
-                  className="list_inp time"
-                  type="text"
-                  value={"1:20"}>
-                </input>
-              </li>
+              {resList}
           </ol>    
-
         </div>
       </main>
     </div>
