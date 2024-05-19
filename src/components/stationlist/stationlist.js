@@ -12,6 +12,10 @@ const StationListFst = () => {
         // Please sync "Station Name" to the project
     }, []);
     
+    const onScreenClick = useCallback(() => { 
+        navigate("/screen")
+    }, [navigate]);
+    
 
     const onCreateClick = useCallback(() => {
         navigate("/screen")
@@ -28,69 +32,61 @@ const StationListFst = () => {
             <h2 className="text_stationlist">Список станций</h2>
 
             <div className="Inform">
-                <div>
+                
                     <ol className="station_name">
-                        <li className="station_name_elem" onClick={onFrameDivClick}>
+                        <li className="station_name_elem" >
                             <input 
+                                onClick={onScreenClick}
                                 className="text_station"
                                 type="text"
                                 value={"Паутинка"}>
                             </input>
+
+                            <input 
+                                className="inp_checkbox"
+                                type="checkbox"
+                                id="inp_checkbox">
+                            </input>
                         </li>
 
-                        <li className="station_name_elem" onClick={onFrameDivClick}>
+                        <li className="station_name_elem" >
                             <input 
+                                onClick={onScreenClick}
                                 className="text_station"
                                 type="text"
                                 value={"Квиз"}>
                             </input>
+
+                            <input 
+                                className="inp_checkbox"
+                                type="checkbox"
+                                id="inp_checkbox">
+                            </input>
                         </li>
 
                         <li className="station_name_elem" onClick={onFrameDivClick}>
                             <input 
+                                onClick={onScreenClick}
                                 className="text_station"
                                 type="text"
                                 value={"Поезд"}>
                             </input>
-                        </li>
-                    </ol>
-                </div>
 
-                <div>
-                    <ol className="station_name">
-                        <li className="station_name_elem">
                             <input 
                                 className="inp_checkbox"
                                 type="checkbox"
-                                id="inp_checkbox"
-                            >
-                            </input>
-                        </li>
-
-                        <li className="station_name_elem">
-                            <input 
-                                className="inp_checkbox"
-                                type="checkbox"
-                                id="inp_checkbox"
-                            >
-                            </input>
-                        </li>
-
-                        <li className="station_name_elem">
-                            <input 
-                                className="inp_checkbox"
-                                type="checkbox"
-                                id="inp_checkbox"
-                            >
+                                id="inp_checkbox">
                             </input>
                         </li>
                     </ol>
-                </div>
+                
+
+                
             </div>
             
             <div className="buttons_stationlist">
-                <button className="buttons_stationlist creating" onClick={onCreateClick} />
-                <button className="buttons_stationlist exit" onClick={onExitClick} />
+                <button className="btn_stationlist creating" onClick={onCreateClick}>Создать</button>
+                <button className="btn_stationlist exiting" onClick={onExitClick}>Назад</button>
             </div>
         </main>
         </div>
