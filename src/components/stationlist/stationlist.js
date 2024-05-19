@@ -10,9 +10,6 @@ const StationListFst = () => {
         navigate("/"); 
     }, [navigate]);
     
-    const onFrameDivClick = useCallback(() => { 
-        // Please sync "Station Name" to the project
-    }, []);
     
     const onScreenClick = useCallback(() => { 
         navigate("/screen")
@@ -46,17 +43,13 @@ const StationListFst = () => {
             <button className="stationlist_close" onClick={onCloseClick} />
             <h2 className="text_stationlist">Список станций</h2>
 
-            <div className="Inform">
-                
+            <div className="Inform_st">
                     <ol className="station_name">
                         {steditList}
                     </ol>
-                
-
-                
             </div>
             
-            <div className="buttons_stationlist">
+            <div className="but_stlist">
                 <button className="btn_stationlist creating" onClick={onCreateClick}>Создать</button>
                 <button className="btn_stationlist exiting" onClick={onExitClick}>Назад</button>
             </div>

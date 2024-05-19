@@ -8,24 +8,42 @@
 
 .result_main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:  1fr 1fr 1fr;
   gap: 10px;
   padding: 20px;
-  position: relative;
+  position: relative; 
 }
+
 
 .result_close {
   border:none;
-  background:  url(./img/close.png) no-repeat;
+  background:  transparent  url(./img/close.png) no-repeat;
   background-size: cover;
   width: 34px;
   height: 34px;
+  top: 20px !important;
+  right: 10px !important;
   justify-self: end;
-  margin-left: auto; 
+  position: absolute;
 }
 
-.result_text {
-  grid-column: 1 / span 2;
+.Inform{
+  grid-column: 1 /span 3;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  
+  grid-template-rows:  2fr 2ft;
+}
+
+.result_list{
+  padding: 0;
+  list-style-type: none;
+  white-space: nowrap; /* не переносить на другие строки */
+
+}
+
+.result_text{
+  grid-column: 1 / span 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,45 +54,58 @@
   font-weight: 900;
 }
 
-.Inform {
-  grid-column: 1 / span 2;
-  display: flex;
-  justify-content: space-around;
-}
-
 .text_namecomand,
-.text_score {
-  color: #526b0e;
-  font-size: 175%;
-  font-weight: 500;
-  text-align: center;
-}
-
-.text_namecomand{
-  
-  text-align: left;
-}
-
-.list_inp {
+.text_score,
+.text_time{
   background: transparent;
   border: none;
   outline: none;
-  text-align: center;
-}
-
-.result_list {
-  padding: 0;
-  list-style-type: none;
-}
-
-.result_list_elem {
-  margin-bottom: 10px;
-}
-
-.text_comand {
   color: #526b0e;
   font-size: 150%;
-  font-weight: 500;
-  text-align: left;
+  font-weight: 700;
+  text-align: center;
+  width: 90%;
 }
 
+.text_namecomand{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.text_score{
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.text_time{
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.text_comand,
+.score,
+.time {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #526b0e;
+  font-size: 120%;
+  font-weight: 500;
+  text-align: center;
+  width: 90%;
+}
+
+.text_comand{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.score{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.time{
+  grid-column: 3;
+  grid-row: 2;
+}
