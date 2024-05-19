@@ -12,6 +12,10 @@ const StationListFst = () => {
         // Please sync "Station Name" to the project
     }, []);
     
+    const onScreenClick = useCallback(() => { 
+        navigate("/screen")
+    }, [navigate]);
+    
 
     const onCreateClick = useCallback(() => {
         navigate("/screen")
@@ -30,8 +34,9 @@ const StationListFst = () => {
             <div className="Inform">
                 
                     <ol className="station_name">
-                        <li className="station_name_elem" onClick={onFrameDivClick}>
+                        <li className="station_name_elem" >
                             <input 
+                                onClick={onScreenClick}
                                 className="text_station"
                                 type="text"
                                 value={"Паутинка"}>
@@ -44,8 +49,9 @@ const StationListFst = () => {
                             </input>
                         </li>
 
-                        <li className="station_name_elem" onClick={onFrameDivClick}>
+                        <li className="station_name_elem" >
                             <input 
+                                onClick={onScreenClick}
                                 className="text_station"
                                 type="text"
                                 value={"Квиз"}>
@@ -60,6 +66,7 @@ const StationListFst = () => {
 
                         <li className="station_name_elem" onClick={onFrameDivClick}>
                             <input 
+                                onClick={onScreenClick}
                                 className="text_station"
                                 type="text"
                                 value={"Поезд"}>

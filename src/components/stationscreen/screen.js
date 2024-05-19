@@ -2,8 +2,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "../stationscreen/screen.css";
 
-import imgSrc1 from './img/Name.png';
-import imgSrc2 from './img/save.png';
+
 
 const StationScreen = () => {
     
@@ -12,39 +11,34 @@ const StationScreen = () => {
     navigate("/stlistfst");
   }, [navigate]);
 
-  const onSave1ImageClick = useCallback(() => {
+  const onSaveClick = useCallback(() => {
     navigate("/stlistfst");
   }, [navigate]);
 
   return (
-    <div className="station-screen">
-      <main className="crossbtn-2-parent">
-        <button className="close" onClick={onCrossBtn2Click} />
-        <img
-          className="stationname-1-icon"
-          alt=""
-          src={imgSrc1}
-        />
-        <div className="text-wrapper">
-          <input className="text" type="text" />
+    <div className="station_screen">
+      <main className="station_screen_main">
+        <button className="station_screen_close" onClick={onCrossBtn2Click} />
+        <h2 className="text_comandname">Название команды</h2>
+        <input 
+          className="text_station"
+          type="text"
+          value={"Кошатники"}>
+        </input>
+        
+        <div className="buttons_station_screen">
+          <button className="btn_station_screen occupied">Создать</button>
+          <button className="btn_station_screen free">Назад</button>
         </div>
-        <div className="frameparent">
-          <div className="but">
-            <button className="occupied" />
-          </div>
-          <div className="but">
-            <button className="free" />
-          </div>
-        </div>
-        <textarea className="framechild" />
-        <div className="save-1-wrapper">
-          <img
-            className="save-1-icon"
-            alt=""
-            src={imgSrc2}
-            onClick={onSave1ImageClick}
-          />
-        </div>
+
+       
+        <textarea className="description" />
+        <input 
+          className="description"
+          type="text">
+        </input>
+
+        <button className="btn_station_screen save" onClick={onSaveClick}>Сохранить</button>
       </main>
     </div>
   );
