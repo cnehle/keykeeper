@@ -61,6 +61,10 @@
     font-weight: 700;
     text-shadow: none;
     text-align: center;
+    background-color: #be94b0;
+    padding: 0.5vw 1vw;
+    border-radius: 5vw;
+    color: #41540B;
 }
 
 @media (min-width: 700px) {
@@ -72,4 +76,21 @@
 .team_pslist_elem {
     color: #41540B;
     white-space: normal;
+}
+
+.team_footer {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10%;
+}
+
+.nextst_btn {
+    border: none;
+    background: url(./img/nextstation_btn.png) no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 100px;
 }

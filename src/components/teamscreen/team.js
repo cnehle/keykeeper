@@ -32,6 +32,10 @@ const TeamScreen = () => {
                         </li>
                     </ul>
                 </div>
+
+                <div className="team_footer">
+                    <button className="nextst_btn"></button>
+                </div>
             </main>
         </div>
     );
