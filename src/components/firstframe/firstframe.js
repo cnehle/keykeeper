@@ -14,8 +14,9 @@ function FirstFrame() {
     const onStationClick = useCallback(() => {
     }, []);
   
-    const onMapClick = useCallback(() => {
-    }, []);
+    const onTeamClick = useCallback(() => {
+      navigate('/teamslist');
+    }, [navigate]);
   
     const onResultsClick = useCallback(() => {
       navigate('/result')
@@ -33,7 +34,7 @@ function FirstFrame() {
             
           <div className="buttons_first" >
             <button className="btn_ff btn_wide_ff" onClick={onStationClick}>Станции</button>
-            <button className="btn_ff btn_wide_ff" onClick={onMapClick}>Команды</button>
+            <button className="btn_ff btn_wide_ff" onClick={onTeamClick}>Команды</button>
             <button className="btn_ff btn_wide_ff" onClick={onResultsClick}>Результаты</button>
           </div>
           

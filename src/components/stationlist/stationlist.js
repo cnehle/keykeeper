@@ -1,4 +1,4 @@
-import { useCallback } from "react"; 
+import { useCallback,useState, useEffect  } from "react"; 
 import { useNavigate } from "react-router-dom"; 
 import "../stationlist/stationlist.css"
 
@@ -11,9 +11,9 @@ const StationListFst = () => {
     }, [navigate]);
     
     
-    const onScreenClick = useCallback(() => { 
-        navigate("/screen")
-    }, [navigate]);
+    // const onScreenClick = useCallback(() => { 
+    //     navigate("/screen")
+    // }, [navigate]);
     
 
     const onCreateClick = useCallback(() => {
