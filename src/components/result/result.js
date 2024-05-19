@@ -1,13 +1,27 @@
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../result/result.css";
 
 const Results = () => {
   const navigate = useNavigate();
+  const [resList, setResList] = useState([]);
 
   const onCloseClick = useCallback(() => {
     navigate("/");
   }, [navigate]);
+
+  useEffect(() => {
+    const Http = new XMLHttpRequest();
+    const url = 'http://5.101.7.212:8181/API/v1/team/pull';
+    Http.open("GET", url);
+    Http.send();
+    Http.onreadystatechange = (e) => {
+        if (Http.readyState === 4 && Http.status === 200) {
+            const data = JSON.parse(Http.responseText);
+            setResList(data.map(item => <li className="result_list_elem" key={item.id}>{item.name}</li>));
+        }
+    }
+}, []);
 
   return (
     <div className="results">
@@ -21,32 +35,7 @@ const Results = () => {
             <h2 className="text_namecomand" id="text_namecomand">Название команды</h2>
             
             <ol className="result_list">
-              <li className="result_list_elem">
-                <input
-                  className="list_inp text_comand"
-                  id="text_comand"
-                  type="text"
-                  value={"Незабудки"}
-                ></input>
-              </li>
-              
-              <li className="result_list_elem">
-                <input
-                  className="list_inp text_comand"
-                  id="text_comand"
-                  type="text"
-                  value={"Кошатники"}
-                ></input>
-              </li>
-              
-              <li className="result_list_elem">
-                <input
-                  className="list_inp text_comand"
-                  id="text_comand"
-                  type="text"
-                  value={"Лучики"}
-                ></input>
-              </li>
+              {resList}
             </ol>
           </div>
           
