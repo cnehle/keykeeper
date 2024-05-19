@@ -5,6 +5,7 @@ import "../result/result.css";
 const Results = () => {
   const navigate = useNavigate();
   const [resList, setResList] = useState([]);
+  const [scoreList, setScoreList] = useState([]);
 
   const onCloseClick = useCallback(() => {
     navigate("/");
@@ -19,6 +20,7 @@ const Results = () => {
         if (Http.readyState === 4 && Http.status === 200) {
             const data = JSON.parse(Http.responseText);
             setResList(data.map(item => <li className="result_list_elem" key={item.id}>{item.name}</li>));
+            setScoreList(data.map(item => <li className="result_list_elem" key={item.id}>{item.total_score}</li>));
         }
     }
 }, []);
@@ -43,32 +45,7 @@ const Results = () => {
             <h2 className="text_score" id="text_score">Баллы</h2>
             
             <ol className="result_list">
-              <li className="result_list_elem">
-                <input
-                  className="list_inp score"
-                  id="score"
-                  type="text"
-                  value={"33"}
-                ></input>
-              </li>
-              
-              <li className="result_list_elem">
-                <input
-                  className="list_inp score"
-                  id="score"
-                  type="text"
-                  value={"54"}
-                ></input>
-              </li>
-              
-              <li className="result_list_elem">
-                <input
-                  className="list_inp score"
-                  id="score"
-                  type="text"
-                  value={"45"}
-                ></input>
-              </li>
+              {scoreList}
             </ol>
           </div>
         </div>
