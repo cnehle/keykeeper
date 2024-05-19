@@ -1,0 +1,45 @@
+.teamlist {
+    background-color: #b0c672;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.teamlist_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.teamlist_close {
+    border: none;
+    background: url(./img/close.png) no-repeat;
+    background-size: cover;
+    width: 34px;
+    height: 34px;
+    top: 10px !important;
+    right: 10px !important;
+    justify-self: end;
+    position: absolute;
+}
+
+.teamlist_text {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    text-shadow: -2px 5px 2px #3546065f;
+    color: #526b0e;
+    font-size: 250%;
+    font-weight: 900;
+}
+
+.teamlist_body {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: space-around;
+}
