@@ -4,6 +4,8 @@ import "../stationlist/stationlist.css"
 
 const StationListFst = () => {
     const navigate = useNavigate();
+    const [steditList, setSteditList] = useState([]);
+
     const onCloseClick = useCallback(() => { 
         navigate("/"); 
     }, [navigate]);
@@ -24,6 +26,19 @@ const StationListFst = () => {
     const onExitClick = useCallback(() =>  {
         navigate("/admin");
     }, [navigate]);
+
+    useEffect(() => {
+        const Http = new XMLHttpRequest();
+        const url = 'http://5.101.7.212:8181/API/v1/station/list';
+        Http.open("GET", url);
+        Http.send();
+        Http.onreadystatechange = (e) => {
+            if (Http.readyState === 4 && Http.status === 200) {
+                const data = JSON.parse(Http.responseText);
+                setSteditList(data.map(item => <li className="station_name_elem" key={item.id}>{item.name}</li>));
+            }
+        }
+    }, []);
     
     return (
     <div className="stationlist">
@@ -34,50 +49,7 @@ const StationListFst = () => {
             <div className="Inform">
                 
                     <ol className="station_name">
-                        <li className="station_name_elem" >
-                            <input 
-                                onClick={onScreenClick}
-                                className="text_station"
-                                type="text"
-                                value={"Паутинка"}>
-                            </input>
-
-                            <input 
-                                className="inp_checkbox"
-                                type="checkbox"
-                                id="inp_checkbox">
-                            </input>
-                        </li>
-
-                        <li className="station_name_elem" >
-                            <input 
-                                onClick={onScreenClick}
-                                className="text_station"
-                                type="text"
-                                value={"Квиз"}>
-                            </input>
-
-                            <input 
-                                className="inp_checkbox"
-                                type="checkbox"
-                                id="inp_checkbox">
-                            </input>
-                        </li>
-
-                        <li className="station_name_elem" onClick={onFrameDivClick}>
-                            <input 
-                                onClick={onScreenClick}
-                                className="text_station"
-                                type="text"
-                                value={"Поезд"}>
-                            </input>
-
-                            <input 
-                                className="inp_checkbox"
-                                type="checkbox"
-                                id="inp_checkbox">
-                            </input>
-                        </li>
+                        {steditList}
                     </ol>
                 
 
