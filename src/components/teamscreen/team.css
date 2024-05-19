@@ -8,6 +8,8 @@
 
 .team_main {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     padding: 20px;
     position: relative;
 }
@@ -29,6 +31,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.team_text,
+.team_name {
     text-shadow: -2px 5px 2px #3546065f;
     color: #526b0e;
     font-size: 150%;
@@ -37,6 +43,33 @@
 
 .team_name {
     color: #41540B;
-    font-size: 100%;
+    font-size: 125%;
     font-weight: 700;
+}
+
+.team_passed_stations_list {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.team_pslist_text {
+    font-size: 125%;
+    font-weight: 700;
+    text-shadow: none;
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .team_pslist {
+        margin-left: 15%;
+    }
+}
+
+.team_pslist_elem {
+    color: #41540B;
+    white-space: normal;
 }
