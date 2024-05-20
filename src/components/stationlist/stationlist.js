@@ -2,7 +2,7 @@ import { useCallback, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../stationlist/stationlist.css"
 
-const StationListFst = () => {
+const StationList = () => {
     const navigate = useNavigate();
     const [steditList, setSteditList] = useState([]);
 
@@ -71,4 +71,4 @@ const StationListFst = () => {
     );
 };
 
-export default StationListFst;
+export default StationList;
