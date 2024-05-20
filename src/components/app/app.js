@@ -8,23 +8,24 @@ import Admin from '../admin/admin';
 import StListFST from '../stationlist/stationlist';
 import Screen from '../stationscreen/screen'
 import TeamList from '../teamlist/teamlist'
+import StationEditScreen from '../stationeditscreen/stedit';
 import './app.css';
 
 
-function App()
-{
-    return(
+function App() {
+    return (
         <div className="app">
-                <Routes>
-                    <Route path="/" element={<FirstFrame />} />;
-                    <Route path="/menu" element={<Menu />} />;
-                    <Route path="/code" element={<Code/>} />;
-                    <Route path="/result" element={<Result/>}/>;
-                    <Route path="/admin" element={<Admin/>}/>;
-                    <Route path="/stlistfst" element={<StListFST/>}/>;
-                    <Route path="/screen" element={<Screen/>}/>;
-                    <Route path="/teamslist" element={<TeamList/>}/>;
-                </Routes>
+            <Routes>
+                <Route path="/" element={<FirstFrame />} />;
+                <Route path="/menu" element={<Menu />} />;
+                <Route path="/code" element={<Code />} />;
+                <Route path="/result" element={<Result />} />;
+                <Route path="/admin" element={<Admin />} />;
+                <Route path="/stlistfst" element={<StListFST />} />;
+                <Route path="/screen" element={<Screen />} />;
+                <Route path="/teamslist" element={<TeamList />} />;
+                <Route path="/stedit" element={<StationEditScreen />} />;
+            </Routes>
         </div>
     );
 }

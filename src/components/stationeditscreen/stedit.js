@@ -7,6 +7,9 @@ import "../stationeditscreen/stedit.css";
 const StationEditScreen = () => {
     const navigate = useNavigate();
     const [curpassword, setCurPassword] = useState("");
+    const [stationName, setStationName] = useState("");
+    const [rules, setRules] = useState("");
+
 
     const onCrossBtn2Click = useCallback(() => {
         navigate("/stlistfst");
@@ -16,27 +19,30 @@ const StationEditScreen = () => {
         navigate("/stlistfst");
     }, [navigate]);
 
+    const handleStnameChange = (e) => {
+        setStationName(e.target.value);
+    };
+
     const handlePswChange = (e) => {
         setCurPassword(e.target.value);
+    };
+
+    const handleRulesChange = (e) => {
+        setRules(e.target.value);
     };
 
     return (
         <div className="station_screen">
             <main className="station_screen_main">
                 <button className="station_screen_close" onClick={onCrossBtn2Click} />
-                <h2 className="text_comandname">Название команды</h2>
-                <input
-                    className="screen_text_station"
-                    type="text"
-                    value={"Кошатники"}>
-                </input>
+                <h2 className="text_comandname">Название станции:</h2>
+                <input className="screen_text_station" type="text" value={stationName} onChange={handleStnameChange} />
 
+                <h2 className="curator_password_text">Пароль для куратора станции:</h2>
                 <input className="curator_password" value={curpassword} onChange={handlePswChange} />
 
-                <textarea className="description" rows="5" cols="50">
-                    Всё тело кошки мягкое, гибкое. Хвост длинный и пушистый. Ноги короткие, но сильные.
-                    Каждый палец вооружён острым выгнутым когтем. Кошка умеет сделать свою лапу бархатной. Она ловко прячет когти, чтобы не притупились. Ходит на пальцах, но когтями по полу не стучит.
-                </textarea>
+                <h2 className="rules_text">Правила станции:</h2>
+                <textarea className="description" rows="5" cols="50" value={rules} onChange={handleRulesChange} />
 
                 <button className="btn_station_screen save" onClick={onSaveClick}>Сохранить</button>
             </main>
