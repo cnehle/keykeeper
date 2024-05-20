@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/keykeeper/static/css/main.04a6985b.css",
-    "main.js": "/keykeeper/static/js/main.8a742688.js",
+    "main.css": "/keykeeper/static/css/main.622e7ef6.css",
+    "main.js": "/keykeeper/static/js/main.36136040.js",
     "static/media/imgframe.jpg": "/keykeeper/static/media/imgframe.a969cfeb6a033abb97d0.jpg",
     "static/media/Adminscreen.jpg": "/keykeeper/static/media/Adminscreen.b7f87b7977cc50dc9928.jpg",
     "static/media/StationList.png": "/keykeeper/static/media/StationList.d3c4c3825895e42f1ccb.png",
@@ -13,11 +13,11 @@
     "static/media/Close.png": "/keykeeper/static/media/Close.c11364adbb33bca749d3.png",
     "static/media/Menu.png": "/keykeeper/static/media/Menu.fb6f55e52b7368654186.png",
     "index.html": "/keykeeper/index.html",
-    "main.04a6985b.css.map": "/keykeeper/static/css/main.04a6985b.css.map",
-    "main.8a742688.js.map": "/keykeeper/static/js/main.8a742688.js.map"
+    "main.622e7ef6.css.map": "/keykeeper/static/css/main.622e7ef6.css.map",
+    "main.36136040.js.map": "/keykeeper/static/js/main.36136040.js.map"
   },
   "entrypoints": [
-    "static/css/main.04a6985b.css",
-    "static/js/main.8a742688.js"
+    "static/css/main.622e7ef6.css",
+    "static/js/main.36136040.js"
   ]
 }
