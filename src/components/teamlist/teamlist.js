@@ -11,7 +11,7 @@ const TeamList = () => {
     }, [navigate]);
 
     useEffect(() => {
-        const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/station/pull';
+        const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/team/pull';
 
         fetch(url, {
             headers: {
