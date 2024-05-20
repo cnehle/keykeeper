@@ -22,10 +22,13 @@ const AdminScreen = () => {
         <div class="admin__header">
           <h1 class="admin_text hello">Привет, администратор!</h1>
         </div>
+        <button className="btn_admin list_st" onClick={onStationList1Click}>Список станций</button>
 
-        <div class="admin__body">
-          <p class="admin_text creat" >Выбери, что редактировать:</p>
-          <button className="btn_admin list_st" onClick={onStationList1Click}>Список станций</button>
+        <div class="buttons_admin">
+          
+          
+          <button className="btn_admin  start" >Начать игру</button>
+          <button className="btn_admin finish" >Закончить игру</button>
       
         </div>
 
