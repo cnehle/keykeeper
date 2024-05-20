@@ -88,7 +88,7 @@
 
 .nextst_btn {
     border: none;
-    background: url(./img/nextstation_btn.png) no-repeat;
+    /* background: url(./img/nextstation_btn.png) no-repeat; */
     background-size: contain;
     background-repeat: no-repeat;
     width: 250px;
