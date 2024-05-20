@@ -8,6 +8,7 @@ const CuratorScreen = () => {
     const [qteam, setQteam] = useState("");
     const [score, setScore] = useState("");
     const [stName, setStName] = useState("");
+    const [stToken, setStToken] = useState("");
     const psw = location.state;
 
     const onCloseClick = useCallback(() => {
@@ -30,7 +31,7 @@ const CuratorScreen = () => {
                 'Content-Type': 'application/json',
                 'ngrok-skip-browser-warning': 'true'
             },
-            password: psw
+            password: JSON.stringify(psw)
         })
             .then(response => {
                 if (!response.ok) {
@@ -40,6 +41,9 @@ const CuratorScreen = () => {
             })
             .then(data => {
                 setStName(data.map(item => item.name));
+            })
+            .then(data => {
+                setStToken(data.map(item => item.token));
             })
             .catch(error => {
                 console.error('Ошибка при получении данных:', error);
@@ -55,7 +59,7 @@ const CuratorScreen = () => {
 
         const headers = {
             'Content-Type': 'application/json',
-            'Token': 'qDpIsiaWmnIb',
+            'Token': stToken, //станции
             'ngrok-skip-browser-warning': 'true'
         };
 
@@ -87,7 +91,7 @@ const CuratorScreen = () => {
 
         const headers = {
             'Content-Type': 'application/json',
-            'Token': 'qDpIsiaWmnIb',
+            'Token': stToken, //станции
             'ngrok-skip-browser-warning': 'true'
         };
 
@@ -120,7 +124,7 @@ const CuratorScreen = () => {
 
         const headers = {
             'Content-Type': 'application/json',
-            'Token': 'qDpIsiaWmnIb',
+            'Token': stToken, //станции
             'ngrok-skip-browser-warning': 'true'
         };
 
