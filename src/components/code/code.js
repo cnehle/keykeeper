@@ -18,8 +18,13 @@ function Code() {
     if (accessCode === "admin" && btnId === "0") {
       navigate('/admin');
     }
-    else if (accessCode === "keykeeper" && btnId === "1") {
-      navigate('/teamedit');
+    else if (btnId === "1") {
+      if (accessCode === "keykeeper") {
+        navigate('/teamedit');
+      } else {
+        const psw = password;
+        navigate('/teamscreen', { state: psw });
+      }
     } else if (btnId === "2") {
       const psw = password;
       navigate('/curator', { state: psw });
