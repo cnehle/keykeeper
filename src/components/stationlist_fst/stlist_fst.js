@@ -16,23 +16,35 @@ const StationListFst = () => {
     // }, [navigate]);
 
 
-    
+
 
     const onExitClick = useCallback(() => {
         navigate("/");
     }, [navigate]);
 
     useEffect(() => {
-        const Http = new XMLHttpRequest();
-        const url = 'http://5.101.7.212:8181/API/v1/station/list';
-        Http.open("GET", url);
-        Http.send();
-        Http.onreadystatechange = (e) => {
-            if (Http.readyState === 4 && Http.status === 200) {
-                const data = JSON.parse(Http.responseText);
-                setSteditList(data.map(item => <li className="station_name_elem" key={item.id}>{item.name}</li>));
+        const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/station/pull';
+
+        fetch(url, {
+            headers: {
+                'Accept': 'application/json',
+                'ngrok-skip-browser-warning': 'true'
             }
-        }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                setSteditList(data.map(item => (
+                    <li className="text_stationlist" key={item.id}>{item.name}</li>
+                )));
+            })
+            .catch(error => {
+                console.error('Ошибка при получении данных:', error);
+            });
     }, []);
 
     return (

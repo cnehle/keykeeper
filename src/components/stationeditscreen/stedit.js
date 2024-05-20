@@ -15,9 +15,38 @@ const StationEditScreen = () => {
         navigate("/stlistfst");
     }, [navigate]);
 
-    const onSaveClick = useCallback(() => {
-        navigate("/stlistfst");
-    }, [navigate]);
+    const onSaveBtnClick = async () => {
+        const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/station/add';
+
+        const new_station = {
+            name: stationName,
+            password: curpassword,
+            rules: rules,
+        };
+
+        const headers = {
+            'Token': 'aUXqOpUQWiaV',
+            'ngrok-skip-browser-warning': 'true'
+        };
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify(new_station)
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert(`Ответ сервера: ${JSON.stringify(data)}`);
+            } else {
+                const error = await response.json();
+                alert(`Ошибка: ${error.error}`);
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+        }
+    };
 
     const handleStnameChange = (e) => {
         setStationName(e.target.value);
@@ -44,7 +73,7 @@ const StationEditScreen = () => {
                 <h2 className="rules_text">Правила станции:</h2>
                 <textarea className="rules" rows="5" cols="50" value={rules} onChange={handleRulesChange} />
 
-                <button className="btn_station_screen save" onClick={onSaveClick}>Сохранить</button>
+                <button className="btn_station_screen save" onClick={onSaveBtnClick}>Сохранить</button>
             </main>
         </div>
     );
