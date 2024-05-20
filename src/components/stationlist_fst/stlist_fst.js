@@ -6,20 +6,13 @@ const StationListFst = () => {
     const navigate = useNavigate();
     const [steditList, setSteditList] = useState([]);
 
-    // const onCloseClick = useCallback(() => {
-    //     navigate("/");
-    // }, [navigate]);
-
-
-    // const onScreenClick = useCallback(() => { 
-    //     navigate("/screen")
-    // }, [navigate]);
-
-
-
-
     const onExitClick = useCallback(() => {
         navigate("/");
+    }, [navigate]);
+
+    const onStationClick = useCallback((event) => {
+        const stationId = event.currentTarget.dataset.id;
+        navigate("/screen", { state: stationId });
     }, [navigate]);
 
     useEffect(() => {
@@ -39,7 +32,10 @@ const StationListFst = () => {
             })
             .then(data => {
                 setSteditList(data.map(item => (
-                    <li className="text_station" key={item.id}>{item.name}</li>
+                    <li className="text_station" key={item.id} onClick={onStationClick} data-id={item.id}>
+                        <span className="text_station">{item.name}</span>
+                        <Radiobutton className="taken_rb">{item.taken}</Radiobutton>
+                    </li>
                 )));
             })
             .catch(error => {
@@ -50,7 +46,6 @@ const StationListFst = () => {
     return (
         <div className="stationlist">
             <main className="stationlist_main">
-                {/* <button className="stationlist_close" onClick={onCloseClick} /> */}
                 <h2 className="text_stationlist">Список станций</h2>
 
                 <div className="Inform_st">
