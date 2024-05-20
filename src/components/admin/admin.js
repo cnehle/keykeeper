@@ -6,7 +6,7 @@ const AdminScreen = () => {
   const navigate = useNavigate();
 
   const onStationList1Click = useCallback(() => {
-    navigate("/stlistfst");
+    navigate("/stlist");
   }, [navigate]);
 
 

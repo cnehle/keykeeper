@@ -5,7 +5,8 @@ import Menu from '../menu/menu';
 import Code from '../code/code';
 import Result from '../result/result';
 import Admin from '../admin/admin';
-import StListFST from '../stationlist/stationlist';
+import StationList from '../stationlist/stationlist';
+import StListFst from '../stationlist_fst/stlist_fst'
 import Screen from '../stationscreen/screen'
 import TeamList from '../teamlist/teamlist'
 import StationEditScreen from '../stationeditscreen/stedit';
@@ -24,7 +25,8 @@ function App() {
                 <Route path="/code" element={<Code />} />;
                 <Route path="/result" element={<Result />} />;
                 <Route path="/admin" element={<Admin />} />;
-                <Route path="/stlistfst" element={<StListFST />} />;
+                <Route path="/stlist" element={<StationList />} />;
+                <Route path="/stlistfst" element={<StListFst />} />;
                 <Route path="/screen" element={<Screen />} />;
                 <Route path="/stedit" element={<StationEditScreen />} />;
                 <Route path="/teamedit" element={<TeamEditScreen />} />;
