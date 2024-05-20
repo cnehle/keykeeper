@@ -87,7 +87,7 @@ const TeamScreen = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                alert(`Ответ сервера: ${JSON.stringify(data)}`);
+                alert(`Ваша следующая станция: ${JSON.stringify(data)}`);
             } else {
                 const error = await response.json();
                 alert(`Ошибка: ${error.error}`);
