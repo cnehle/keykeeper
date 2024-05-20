@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/keykeeper/static/css/main.e771a58b.css",
-    "main.js": "/keykeeper/static/js/main.1aaf38bf.js",
+    "main.js": "/keykeeper/static/js/main.e8f1cf0b.js",
     "static/media/imgframe.jpg": "/keykeeper/static/media/imgframe.a969cfeb6a033abb97d0.jpg",
     "static/media/Adminscreen.jpg": "/keykeeper/static/media/Adminscreen.b7f87b7977cc50dc9928.jpg",
     "static/media/nextstation_btn.png": "/keykeeper/static/media/nextstation_btn.03c82826092140b66d49.png",
@@ -15,10 +15,10 @@
     "static/media/Menu.png": "/keykeeper/static/media/Menu.fb6f55e52b7368654186.png",
     "index.html": "/keykeeper/index.html",
     "main.e771a58b.css.map": "/keykeeper/static/css/main.e771a58b.css.map",
-    "main.1aaf38bf.js.map": "/keykeeper/static/js/main.1aaf38bf.js.map"
+    "main.e8f1cf0b.js.map": "/keykeeper/static/js/main.e8f1cf0b.js.map"
   },
   "entrypoints": [
     "static/css/main.e771a58b.css",
-    "static/js/main.1aaf38bf.js"
+    "static/js/main.e8f1cf0b.js"
   ]
 }
