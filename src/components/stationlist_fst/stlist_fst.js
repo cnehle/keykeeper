@@ -6,9 +6,9 @@ const StationListFst = () => {
     const navigate = useNavigate();
     const [steditList, setSteditList] = useState([]);
 
-    const onCloseClick = useCallback(() => {
-        navigate("/");
-    }, [navigate]);
+    // const onCloseClick = useCallback(() => {
+    //     navigate("/");
+    // }, [navigate]);
 
 
     // const onScreenClick = useCallback(() => { 
@@ -19,7 +19,7 @@ const StationListFst = () => {
     
 
     const onExitClick = useCallback(() => {
-        navigate("/admin");
+        navigate("/");
     }, [navigate]);
 
     useEffect(() => {
@@ -38,7 +38,7 @@ const StationListFst = () => {
     return (
         <div className="stationlist">
             <main className="stationlist_main">
-                <button className="stationlist_close" onClick={onCloseClick} />
+                {/* <button className="stationlist_close" onClick={onCloseClick} /> */}
                 <h2 className="text_stationlist">Список станций</h2>
 
                 <div className="Inform_st">
