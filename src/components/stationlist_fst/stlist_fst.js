@@ -34,7 +34,6 @@ const StationListFst = () => {
                 setSteditList(data.map(item => (
                     <li className="text_station" key={item.id} onClick={onStationClick} data-id={item.id}>
                         <span className="text_station">{item.name}</span>
-                        <Radiobutton className="taken_rb">{item.taken}</Radiobutton>
                     </li>
                 )));
             })
