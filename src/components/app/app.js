@@ -9,6 +9,9 @@ import StListFST from '../stationlist/stationlist';
 import Screen from '../stationscreen/screen'
 import TeamList from '../teamlist/teamlist'
 import StationEditScreen from '../stationeditscreen/stedit';
+import TeamScreen from '../teamscreen/team';
+import TeamEditScreen from '../teameditscreen/teamedit';
+import CuratorScreen from '../curator/curator';
 import './app.css';
 
 
@@ -23,9 +26,12 @@ function App() {
                 <Route path="/admin" element={<Admin />} />;
                 <Route path="/stlistfst" element={<StListFST />} />;
                 <Route path="/screen" element={<Screen />} />;
-                <Route path="/teamslist" element={<TeamList />} />;
                 <Route path="/stedit" element={<StationEditScreen />} />;
-            </Routes>
+                <Route path="/teamedit" element={<TeamEditScreen />} />;
+                <Route path="/teamscreen" element={<TeamScreen />} />;
+                <Route path="/curator" element={<CuratorScreen />} />;
+                <Route path="/teamslist" element={<TeamList/>}/>;
+             </Routes>
         </div>
     );
 }
