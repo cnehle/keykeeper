@@ -9,11 +9,59 @@ const AdminScreen = () => {
     navigate("/stlist");
   }, [navigate]);
 
-
-
   const onExitClick = useCallback(() => {
     navigate("/menu");
   }, [navigate]);
+
+  const onStartBtnClick = async () => {
+    const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/game/start';
+    const headers = {
+      'Token': 'aUXqOpUQWiaV',
+      'ngrok-skip-browser-warning': 'true'
+    };
+
+    try {
+      const response = await fetch(url, {
+        method: 'DELETE',
+        headers
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(`Ответ сервера: ${JSON.stringify(data)}`);
+      } else {
+        const error = await response.json();
+        alert(`Ошибка: ${error.error}`);
+      }
+    } catch (error) {
+      console.error('Ошибка:', error);
+    }
+  };
+
+  const onEndBtnClick = async () => {
+    const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/game/end';
+    const headers = {
+      'Token': 'aUXqOpUQWiaV',
+      'ngrok-skip-browser-warning': 'true'
+    };
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(`Ответ сервера: ${JSON.stringify(data)}`);
+      } else {
+        const error = await response.json();
+        alert(`Ошибка: ${error.error}`);
+      }
+    } catch (error) {
+      console.error('Ошибка:', error);
+    }
+  };
 
   return (
     <div className="admin-screen">
@@ -25,11 +73,11 @@ const AdminScreen = () => {
         <button className="btn_admin list_st" onClick={onStationList1Click}>Список станций</button>
 
         <div class="buttons_admin">
-          
-          
-          <button className="btn_admin  start" >Начать игру</button>
-          <button className="btn_admin finish" >Закончить игру</button>
-      
+
+
+          <button className="btn_admin  start" onClick={onStartBtnClick}>Начать игру</button>
+          <button className="btn_admin finish" onClick={onEndBtnClick}>Закончить игру</button>
+
         </div>
 
         <div class="admin__footer">
