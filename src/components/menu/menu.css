@@ -1,0 +1,87 @@
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 45.9px;
+  position: relative;
+  height: 45.9px;
+  background-image: url(./img/Close.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.wrapper {
+  width: 317.5px;
+  height: 110.6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  justify-content: flex-start;
+}
+.frame-child {
+  width: 287.8px;
+  height: 143px;
+  object-fit: cover;
+}
+.button4,
+.button5,
+.button6 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 256.3px;
+  position: relative;
+  height: 54.9px;
+  background-image: url(./img/Admin.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.button5,
+.button6 {
+  background-image: url(./img/Keeper.png);
+}
+.button6 {
+  background-image: url(./img/Curator.png);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 46.76951217651367px;
+}
+.frame-div {
+  align-self: stretch;
+  height: 524.1px;
+  gap: 47.405555725097656px;
+}
+.frame-container,
+.frame-div,
+.menu1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.frame-container {
+  width: 320.2px;
+  height: 640.4px;
+  padding: 0 16.99444580078125px;
+  box-sizing: border-box;
+  gap: 13.416666984558105px;
+}
+.menu1 {
+  position: relative;
+  width: 360px;
+  height: 800px;
+  overflow: hidden;
+  background-image: url(./img/MenuFrame.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  mix-blend-mode: normal;
+}
