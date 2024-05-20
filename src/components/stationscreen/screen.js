@@ -15,11 +15,11 @@ const StationScreen = () => {
     <div className="station_screen">
       <main className="station_screen_main">
         <button className="station_screen_close" onClick={onCrossBtn2Click} />
-        <h2 className="text_comandname">Название команды</h2>
+        <h2 className="text_comandname">Название станции</h2>
         <input
           className="screen_text_station"
           type="text"
-          value={"Кошатники"}>
+          value={"Ручеек"}>
         </input>
 
         <div className="buttons_station_screen">
@@ -28,8 +28,8 @@ const StationScreen = () => {
         </div>
 
         <textarea className="description" rows="5" cols="50">
-          Всё тело кошки мягкое, гибкое. Хвост длинный и пушистый. Ноги короткие, но сильные.
-          Каждый палец вооружён острым выгнутым когтем. Кошка умеет сделать свою лапу бархатной. Она ловко прячет когти, чтобы не притупились. Ходит на пальцах, но когтями по полу не стучит.
+        Участники (теоретически от 4—5 пар, чем больше, тем лучше) разделяются на пары (чаще разнополые), 
+        взявшись за руки, они встают в две колонны на некотором расстоянии друг от друга, поднимают сцепленные руки высоко над головами, образуя тоннель. 
         </textarea>
       </main>
     </div>

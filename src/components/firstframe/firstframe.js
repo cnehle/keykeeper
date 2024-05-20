@@ -12,7 +12,9 @@ function FirstFrame() {
   
   
     const onStationClick = useCallback(() => {
-    }, []);
+      
+      navigate('/stlistfst');
+    }, [navigate]);
   
     const onTeamClick = useCallback(() => {
       navigate('/teamslist');
