@@ -12,7 +12,7 @@ const StationEditScreen = () => {
 
 
     const onCrossBtn2Click = useCallback(() => {
-        navigate("/stlistfst");
+        navigate("/stlist");
     }, [navigate]);
 
     const onSaveBtnClick = async () => {

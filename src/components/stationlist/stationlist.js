@@ -10,12 +10,6 @@ const StationList = () => {
         navigate("/");
     }, [navigate]);
 
-
-    // const onScreenClick = useCallback(() => { 
-    //     navigate("/screen")
-    // }, [navigate]);
-
-
     const onCreateClick = useCallback(() => {
         navigate("/stedit")
     }, [navigate]);

@@ -47,16 +47,14 @@ const StationScreen = () => {
         <h2 className="text_comandname">{stationName}</h2>
 
         <div className="buttons_station_screen">
-          {stationTake ? (
-            <button className="btn_station_screen occupied">Занято</button>
+          {stationTake === true ? (
+            <button className="btn_station_screen_occupied">Занято</button>
           ) : (
-            <button className="btn_station_screen free">Свободно</button>
+            <button className="btn_station_screen_free">Свободно</button>
           )}
         </div>
 
-        <textarea className="description" rows="5" cols="50">
-          {stationRules}
-        </textarea>
+        <textarea className="description" value={stationRules} rows="5" cols="50" />
       </main>
     </div>
   );
