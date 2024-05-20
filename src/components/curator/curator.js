@@ -25,13 +25,16 @@ const CuratorScreen = () => {
 
     useEffect(() => {
         const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/station/token';
-
+        const new_psw = {
+            password: psw
+        }
         fetch(url, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'ngrok-skip-browser-warning': 'true'
             },
-            password: JSON.stringify(psw)
+            body: JSON.stringify(new_psw)
         })
             .then(response => {
                 if (!response.ok) {
@@ -40,15 +43,13 @@ const CuratorScreen = () => {
                 return response.json();
             })
             .then(data => {
-                setStName(data.map(item => item.name));
-            })
-            .then(data => {
-                setStToken(data.map(item => item.token));
+                setStName(data.name);
+                setStToken(data.token);
             })
             .catch(error => {
                 console.error('Ошибка при получении данных:', error);
             });
-    }, []);
+    }, [psw]);
 
     const onStartClClick = async () => {
         const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/challenge/start';

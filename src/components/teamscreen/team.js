@@ -5,23 +5,31 @@ import "../teamscreen/team.css";
 const TeamScreen = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const psw = location.state;
-    const [psList, setPsList] = useState([]);
+    const [psw, setPsw] = useState('');
     const [teamname, setTeamname] = useState("");
+    const [teamToken, setTeamToken] = useState("");
 
     const onCloseClick = useCallback(() => {
         navigate("/");
     }, [navigate]);
 
     useEffect(() => {
+        setPsw(location.state);
+    }, [location.state]);
+
+    useEffect(() => {
         const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/team/token';
+        const new_psw = {
+            password: psw
+        }
 
         fetch(url, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'ngrok-skip-browser-warning': 'true'
             },
-            password: psw
+            body: JSON.stringify(new_psw)
         })
             .then(response => {
                 if (!response.ok) {
@@ -30,12 +38,63 @@ const TeamScreen = () => {
                 return response.json();
             })
             .then(data => {
-                setTeamname(data.map(item => item.name));
+                setTeamToken(data.token);
             })
             .catch(error => {
                 console.error('Ошибка при получении данных:', error);
             });
-    }, []);
+    }, [psw]);
+
+    useEffect(() => {
+        const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/team/';
+
+        fetch(url, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Token': teamToken,
+                'ngrok-skip-browser-warning': 'true'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                setTeamname(data.name);
+            })
+            .catch(error => {
+                console.error('Ошибка при получении данных:', error);
+            });
+    }, [teamToken]);
+
+    const onNextClick = async () => {
+        const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/station/next';
+
+        const headers = {
+            'Content-Type': 'application/json',
+            'Token': teamToken,
+            'ngrok-skip-browser-warning': 'true'
+        };
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: headers
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert(`Ответ сервера: ${JSON.stringify(data)}`);
+            } else {
+                const error = await response.json();
+                alert(`Ошибка: ${error.error}`);
+            }
+        } catch (error) {
+            console.error('Ошибка:', error);
+        }
+    };
 
     return (
         <div className="team">
@@ -46,15 +105,8 @@ const TeamScreen = () => {
                     <h3 className="team_name">{teamname}</h3>
                 </div>
 
-                <div className="team_passed_stations_list">
-                    <h3 className="team_text team_pslist_text">Список пройденных станций:</h3>
-                    <ul className="team_pslist">
-                        {psList}
-                    </ul>
-                </div>
-
                 <div className="team_footer">
-                    <button className="nextst_btn"></button>
+                    <button className="nextst_btn" onClick={onNextClick}></button>
                 </div>
             </main>
         </div>

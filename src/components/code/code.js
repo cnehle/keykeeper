@@ -15,24 +15,24 @@ function Code() {
   const onNextClick = useCallback(() => {
     const accessCode = document.getElementsByClassName("input")[0].value;
     const btnId = location.state;
-    if (accessCode === "admin" && btnId === "0") {
+    if (accessCode.trim() === "") {
+      alert("Пустой пароль недопустим");
+    } else if (accessCode === "admin" && btnId === "0") {
       navigate('/admin');
     }
     else if (btnId === "1") {
       if (accessCode === "keykeeper") {
         navigate('/teamedit');
       } else {
-        const psw = password;
-        navigate('/teamscreen', { state: psw });
+        navigate('/teamscreen', { state: password });
       }
     } else if (btnId === "2") {
-      const psw = password;
-      navigate('/curator', { state: psw });
+      navigate('/curator', { state: password });
     }
     else {
       alert("Некорректный пароль");
     }
-  }, [navigate, location.state]);
+  }, [navigate, location.state, password]);
 
   return (
     <div className="code">
