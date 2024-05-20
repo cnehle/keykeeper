@@ -11,15 +11,19 @@ const Results = () => {
   }, [navigate]);
 
   useEffect(() => {
-    const url = 'http://5.101.7.212:8181/API/v1/team/pull';
+    const url = 'https://warthog-growing-honeybee.ngrok-free.app/API/v1/team/pull';
 
-    fetch(url)
+    fetch(url, {
+      headers: {
+        'Accept': 'application/json',
+        'ngrok-skip-browser-warning': 'true'
+      }
+    })
       .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error(`Ошибка: ${response.status}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error ${response.status}`);
         }
+        return response.json();
       })
       .then(data => {
         setResList(data.map(item => (
