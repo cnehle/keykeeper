@@ -39,7 +39,7 @@ const StationListFst = () => {
             })
             .then(data => {
                 setSteditList(data.map(item => (
-                    <li className="text_stationlist" key={item.id}>{item.name}</li>
+                    <li className="text_station" key={item.id}>{item.name}</li>
                 )));
             })
             .catch(error => {

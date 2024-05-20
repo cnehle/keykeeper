@@ -8,7 +8,7 @@
 
 .Inform_team{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
 }
 
 .stationlist_main{
@@ -32,7 +32,7 @@
   font-weight: 900;
 }
 
-.team{
+.team_name{
     padding: 0;
     list-style-type: none;
     white-space: nowrap; /* не переносить на другие строки */

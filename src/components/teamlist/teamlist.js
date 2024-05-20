@@ -27,7 +27,7 @@ const TeamList = () => {
             })
             .then(data => {
                 setTeamList(data.map(item => (
-                    <li className="team" key={item.id}>{item.name}</li>
+                    <li className="team_name" key={item.id}>{item.name}</li>
                 )));
             })
             .catch(error => {

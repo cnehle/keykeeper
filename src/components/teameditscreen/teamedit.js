@@ -64,9 +64,8 @@ const TeamEditScreen = () => {
                     <input className="set_team_password" value={teamPassword} onChange={handleTeamPasswordChange} />
                 </div>
 
-                <div className="teamedit_footer">
-                    <button className="teamedit_save_btn" onClick={handleSaveClick}>Сохранить</button>
-                </div>
+                <button className="teamedit_save_btn" onClick={handleSaveClick}>Сохранить</button>
+                
             </main>
         </div>
     );

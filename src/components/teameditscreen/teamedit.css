@@ -7,8 +7,8 @@
 }
 
 .teamedit_main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     padding: 20px;
     position: relative;
@@ -27,7 +27,6 @@
 }
 
 .teamedit_header {
-    grid-column: 1 / span 2;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -37,12 +36,12 @@
 .teamedit_text {
     text-shadow: -2px 5px 2px #3546065f;
     color: #526b0e;
-    font-size: 150%;
+    font-size: 200%;
     font-weight: 900;
 }
 
 .teamedit_password {
-    font-size: 125%;
+    font-size: 150%;
     font-weight: 600;
 }
 
@@ -63,24 +62,27 @@
     }
 }
 
-.team_footer {
-    grid-column: 1 / span 2;
-    display: block;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 10%;
-}
+
+
 
 .teamedit_save_btn {
-    background: #fbd193;
+    display: flex;
+    align-items: center;
+    
+  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 10%;
     border: 0;
     outline: 0;
     border-radius: 15px;
     color: #526b0e;
-    font-weight: bold;
-    font-size: 100%;
-    padding: 1px 5px;
+    font-weight: 900;
+    font-size: 18px;
+    background: #fbd193;
     box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
-    margin: auto;
-    display: block;
-}
+   
+    padding: 10px 20px;
+    
+  }
