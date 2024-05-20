@@ -10,6 +10,7 @@ import Screen from '../stationscreen/screen'
 import TeamScreen from '../teamscreen/team';
 import TeamEditScreen from '../teameditscreen/teamedit';
 import CuratorScreen from '../curator/curator';
+import TeamList from '../teamlist/teamlist';
 import './app.css';
 
 
@@ -27,7 +28,8 @@ function App() {
                 <Route path="/teamedit" element={<TeamEditScreen />} />;
                 <Route path="/teamscreen" element={<TeamScreen />} />;
                 <Route path="/curator" element={<CuratorScreen />} />;
-            </Routes>
+                <Route path="/teamslist" element={<TeamList/>}/>;
+             </Routes>
         </div>
     );
 }
