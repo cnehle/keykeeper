@@ -1,0 +1,94 @@
+.station_screen {
+    background: transparent url(./img/stationscreen.png) no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.station_screen_main {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    position: relative;
+}
+
+.station_screen_close {
+    border: none;
+    background: transparent url(./img/close.png) no-repeat;
+    background-size: cover;
+    width: 34px;
+    height: 34px;
+    top: 20px !important;
+    right: 10px !important;
+    justify-self: end;
+    position: absolute;
+}
+
+.text_comandname {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    color: #526b0e;
+    font-weight: 700;
+    font-size: 200%;
+    margin: 0;
+}
+
+.screen_text_station {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #526b0e;
+    font-size: 150%;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.btn_station_screen {
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+    padding: 10px;
+    background: #738F23;
+    box-shadow: -2px 5px 2px rgba(51, 25, 0, 0.25);
+    text-align: center;
+    width: 130px;
+    margin-bottom: 20px;
+}
+
+.occupied {
+    margin-right: 5%;
+    width: 130px;
+
+    background: #b43797;
+}
+
+.free {
+    margin-left: 5%;
+    width: 130px;
+}
+
+.buttons_station_screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+
+    width: 100%;
+    height: 200px;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #154e00;
+    font-size: 14px;
+}
