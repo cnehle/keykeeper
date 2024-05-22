@@ -7,6 +7,7 @@
 [текущая версия](https://cnehle.github.io/keykeeper/)
 \
 пароль администратора: admin
+\
 исходный пароль наставника: keykeeper
 \
 \
